@@ -1,0 +1,87 @@
+@use '../base/fonts' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+  font-family: $font-base;
+}
+
+.hero__content{
+  h1{
+    color: $dark-blue;
+    font-weight: 800;
+    font-size: 40px;
+
+
+    @include breakpoint('tablet_horizontal') {
+        font-size: 56px; 
+        line-height: 70px;
+    }
+  }
+
+  p{
+    color: $text-color;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+.hero__img{
+
+  p{
+    color: $text-color;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    margin: 0;
+
+    @include breakpoint('tablet_horizontal') {
+       font-size: 16px; 
+    }
+  }
+
+  h2{
+    color: $dark-blue;
+    font-weight: 800;
+    font-size: 32px;
+    margin: 0;
+
+    @include breakpoint('tablet_horizontal') {
+       font-size: 40px; 
+    }
+
+  }
+}
+
+.cards{
+  h2{
+    color: white;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 40px;
+
+  }
+
+  h3{
+    color: $dark-blue;
+    font-weight: 800;
+    font-size: 24px;
+  }
+
+  p{
+    color: $text-color;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  a{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
