@@ -2,10 +2,11 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
+  base: '/first_webpage/',  // Asegúrate de poner el nombre de tu repositorio
   server: {
     watch: {
-      usePolling: true, //  Fuerza Vite a hacer polling en lugar de eventos del SO
-      interval: 100     //  Opcional: intervalo en milisegundos
+      usePolling: true, // Fuerza Vite a hacer polling en lugar de eventos del SO
+      interval: 100     // Opcional: intervalo en milisegundos
     }
   },
   css: {
@@ -14,3 +15,5 @@ export default defineConfig({
     }
   }
 })
+
+
