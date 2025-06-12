@@ -34,7 +34,8 @@ a {
   text-decoration: none;
 
   @include on-event {
-    color: lighten($brand-color,20%);
+    color: color.adjust($brand-color, $lightness: 20%);
+
 
   }
 }
