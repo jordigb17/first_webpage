@@ -1,0 +1,67 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+
+    @include breakpoint('mobile') {
+        justify-content: center;
+    }
+
+     @include breakpoint('tablet') {
+        justify-content: space-around;
+    }
+
+     @include breakpoint('desktop') {
+        justify-content: space-between;
+    }
+
+    
+    
+    div{
+        width: 350px;
+        height: 322px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 30px 30px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: relative;
+        margin-top: 60px;
+
+        img{
+            position: absolute;
+            top: -27px;
+        }
+
+        a{
+            position: absolute;
+            bottom: 40px;
+        }
+    }
+
+    div:first-child{
+        background: $orange-pink;
+
+        @include breakpoint('mobile') {
+           height: auto; 
+           padding: 20px;
+
+           h2{
+            margin: 0;
+           }
+        }
+
+        @include breakpoint('tablet') {
+        height: 322px;
+        
+        h2{
+            margin-top: 15%;
+        }
+        
+        
+    }
+    }
+    }

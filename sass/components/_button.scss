@@ -1,0 +1,38 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+@use '../abstracts/variables' as *;
+
+.button{
+    padding: 15px 20px;
+    border-radius: 25px;
+    border: none;
+    color: white;
+
+    &__header{
+        background-color: $dark-blue;
+
+        &:hover{
+            background-color: #666CA3;
+        }
+    }
+
+    &__hero{
+        background: $orange-pink;
+
+        &:hover{
+            background: linear-gradient(180deg,rgba(255, 109, 75, 0.71) 0%, rgba(240, 42, 166, 0.7) 100%);
+
+        }
+    }
+
+    &__footer{
+        background: $blue-pink;
+
+        &:hover{
+            background: linear-gradient(180deg,rgba(72, 81, 255, 0.68) 0%, rgba(240, 42, 166, 0.68) 100%);
+        }
+    }
+}
+

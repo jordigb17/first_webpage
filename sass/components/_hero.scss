@@ -1,0 +1,90 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+.hero{
+    padding-top: 10%;
+    @include breakpoint('tablet') {
+            display: flex;
+        }
+
+    
+    
+    &__content{
+
+        @include breakpoint('tablet_horizontal') {
+            max-width: 60%;
+        }
+        
+
+       
+
+        button{
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__img{
+        text-align: center;
+        margin-left: 10%;
+        position: relative;
+        margin-bottom: 80px;
+        width: 80%;
+        
+        @include breakpoint('tablet_horizontal') {
+                margin-left: 20%;
+            }
+
+        &--mobile{
+            @include breakpoint('tablet') {
+                display: none;
+            }
+        }
+
+        &--desktop{
+            display: none;
+            @include breakpoint('tablet') {
+                display: block;
+            }
+
+            @include breakpoint('tablet_horizontal') {
+                margin-left: 10%;
+            }
+
+        }
+
+        div{
+            display: inline-block;
+            width: max-content;
+            text-align: left;
+            background-color: white;
+            border-radius: 10px;
+            
+            
+        }
+        .stat1{
+            padding: 16px 45px 16px 20px;
+            position: absolute;
+            top: 72%;
+            left: -9%;
+            box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .stat2{
+            padding: 16px 20px ;
+            position: absolute;
+            top: -2%;
+            left: 74%;
+            box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
+
+            @include breakpoint('tablet_horizontal') {
+                left: 67%;
+            }
+
+            @include breakpoint('desktop') {
+                left: 60%;
+            }
+        }
+    }
+}
+
+
